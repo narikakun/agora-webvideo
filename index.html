@@ -1,0 +1,43 @@
+<!-- https://github.com/AgoraIO/API-Examples-Web -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Share The Screen Agora</title>
+    <style>
+        .player {
+            width: 480px;
+            height: 320px;
+        }
+        .player-name {
+            margin: 8px 0;
+        }
+        @media (max-width: 640px) {
+            .player {
+                width: 320px;
+                height: 240px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row video-group">
+        <div class="col">
+            <p id="local-player-name" class="player-name"></p>
+            <div id="local-player" class="player"></div>
+        </div>
+        <div class="w-100"></div>
+        <div class="col">
+            <div id="remote-playerlist"></div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://download.agora.io/sdk/release/AgoraRTC_N.js"></script>
+<script src="./videoShare.js"></script>
+</body>
+</html>
